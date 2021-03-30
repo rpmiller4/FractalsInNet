@@ -344,7 +344,7 @@ namespace Fractron9000.CPUEngine
 				GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0, TextureTarget.Texture2D, accumTexID, 0);
 				GL.Enable(EnableCap.Blend);
 				GL.BlendEquation(BlendEquationMode.FuncAdd);
-				GL.BlendFunc(BlendingFactorSrc.One, BlendingFactorDest.One);
+				GL.BlendFunc((BlendingFactor)BlendingFactorSrc.One, (BlendingFactor)BlendingFactorDest.One);
 
 				GL.Disable(EnableCap.PointSmooth);
 
@@ -359,13 +359,13 @@ namespace Fractron9000.CPUEngine
 				GL.BindTexture(TextureTarget.Texture2D, paletteTexID);
 
 				GL.Color4(DownScaleFactor,DownScaleFactor,DownScaleFactor,DownScaleFactor);		
-				GL.EnableClientState(EnableCap.VertexArray);
-				GL.EnableClientState(EnableCap.TextureCoordArray);
+				GL.EnableClientState((ArrayCap)EnableCap.VertexArray);
+				GL.EnableClientState((ArrayCap)EnableCap.TextureCoordArray);
 				GL.VertexPointer(2, VertexPointerType.Float, 16, (IntPtr)dots);
 				GL.TexCoordPointer(2, TexCoordPointerType.Float, 16, (IntPtr)((byte*)dots + 8));
 				GL.DrawElements(BeginMode.Points, DotsPerCycle, DrawElementsType.UnsignedShort, (IntPtr)dotIndicies);
-				GL.DisableClientState(EnableCap.VertexArray);
-				GL.DisableClientState(EnableCap.TextureCoordArray);
+				GL.DisableClientState((ArrayCap)EnableCap.VertexArray);
+				GL.DisableClientState((ArrayCap)EnableCap.TextureCoordArray);
 
 				GL.Disable(EnableCap.Texture2D);
 				GL.BindTexture(TextureTarget.Texture2D, 0);

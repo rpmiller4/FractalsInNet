@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C# Express 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CudaDotNet", "CudaDotNet\CudaDotNet.csproj", "{545F1C72-A26C-4985-B996-0932B7648335}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTUtil", "MTUtil\MTUtil.csproj", "{BA10F124-2CB2-49D5-8CE3-6E70D19D73FC}"
@@ -62,5 +64,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72FD72A9-2AAC-4691-9E12-4B9AB6623D37}
 	EndGlobalSection
 EndGlobal
